@@ -17,6 +17,9 @@ async def get_dashboard_summary(
     
     # Bug 3 (possibly a bug):
     # I'm not entirely sure if this conversion won't lead to bugs
+    # UPD: I have a feeling that there are quite many conversion and it can be a problem
+    # NUMERIC(10,3) -> Decimal -> str -> Redis -> str -> float() -> JS Math.round
+    # Needs deeper investigation.
     total_revenue_float = float(revenue_data['total'])
     
     return {
