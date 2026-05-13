@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { RevenueSummary } from "./RevenueSummary";
 
+// Both customers have a shared list of properties?
+// Looks suspicious:D
 const PROPERTIES = [
   { id: 'prop-001', name: 'Beach House Alpha' },
   { id: 'prop-002', name: 'City Apartment Downtown' },
