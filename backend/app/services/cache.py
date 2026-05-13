@@ -15,7 +15,7 @@ async def get_revenue_summary(property_id: str, tenant_id: str) -> Dict[str, Any
     # ('prop-001', 'tenant-a', 'Beach House Alpha', 'Europe/Paris'),
     # ('prop-001', 'tenant-b', 'Mountain Lodge Beta', 'America/New_York'),
 
-    cache_key = f"revenue:{property_id}"
+    cache_key = f"revenue:{tenant_id}:{property_id}"
     
     # Try to get from cache
     cached = await redis_client.get(cache_key)
