@@ -15,6 +15,8 @@ async def get_dashboard_summary(
     
     revenue_data = await get_revenue_summary(property_id, tenant_id)
     
+    # Bug 3 (possibly a bug):
+    # I'm not entirely sure if this conversion won't lead to bugs
     total_revenue_float = float(revenue_data['total'])
     
     return {
